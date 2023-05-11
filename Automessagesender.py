@@ -26,10 +26,11 @@ def test_untitled_test_case():
     login_form = driver.find_element(By.XPATH, "//*[@id='i0281']")
     
     login_form.find_element(By.XPATH, "//*[@id='i0116']").click()
-    login_form.find_element(By.ID, "i0116").send_keys("")
+    login_form.find_element(By.ID, "i0116").send_keys("hard@elsner.com.au")
+    time.sleep(3)
     driver.find_element(By.ID, "idSIButton9").click()
     driver.find_element(By.ID, "i0118").clear()
-    driver.find_element(By.ID, "i0118").send_keys("")
+    driver.find_element(By.ID, "i0118").send_keys("Alpesh@shah14")
     time.sleep(3)
     driver.find_element(By.ID, "idSIButton9").click()
     time.sleep(2)
@@ -53,11 +54,11 @@ def test_untitled_test_case():
             message_field.send_keys("Good Morning")
             
             #uncomment this If you want to send a message
-            #driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div/div[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div/button').click()
-            
-        
-                
-        
+            driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div/div[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div/button').click()
+
+
+
+
         
     
 
@@ -94,3 +95,4 @@ def test_untitled_test_case():
 if __name__ == "__main__":
     unittest.main()
 """
+
