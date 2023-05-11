@@ -12,10 +12,12 @@ import unittest, time, re
 def driver():
     global driver 
     driver = webdriver.Chrome()
+
     
 def test_untitled_test_case():
     driver()
     driver.get("https://www.skype.com/en/")
+    driver.maximize_window()
     time.sleep(3)
     driver.find_element(By.XPATH, "//*[@id='customMeControl']/a[1]/span[1]").click()
     time.sleep(3)
@@ -39,7 +41,7 @@ def test_untitled_test_case():
     time.sleep(2)
     global Favorites_list
     Favorites_list = driver.find_elements(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div/div[1]/div[3]/div[1]/div[3]/div[2]/div[1]/div/div[1]/div/div/div[3]/div")
-    
+
     
     for i in range(1, len(Favorites_list)+1):
         wait = WebDriverWait(driver, 10)
