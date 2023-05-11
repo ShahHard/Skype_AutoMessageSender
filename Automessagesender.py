@@ -26,10 +26,10 @@ def test_untitled_test_case():
     login_form = driver.find_element(By.XPATH, "//*[@id='i0281']")
     
     login_form.find_element(By.XPATH, "//*[@id='i0116']").click()
-    login_form.find_element(By.ID, "i0116").send_keys("luckys.elsner@gmail.com")
+    login_form.find_element(By.ID, "i0116").send_keys("")
     driver.find_element(By.ID, "idSIButton9").click()
     driver.find_element(By.ID, "i0118").clear()
-    driver.find_element(By.ID, "i0118").send_keys("123@elsner")
+    driver.find_element(By.ID, "i0118").send_keys("")
     time.sleep(3)
     driver.find_element(By.ID, "idSIButton9").click()
     time.sleep(2)
@@ -51,7 +51,9 @@ def test_untitled_test_case():
             get_profile.click()
             message_field = wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div/div[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[1]/div/div/div/div/div[2]/div/div/div/div[2]/div/div/div")))           
             message_field.send_keys("Good Morning")
-            driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div/div[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div/button').click()
+            
+            #uncomment this If you want to send a message
+            #driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div/div[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div/button').click()
             
         
                 
